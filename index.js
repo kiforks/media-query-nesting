@@ -24,9 +24,19 @@ module.exports = stylelint.createPlugin(ruleName, (enabled) => {
 		}
 
 		root.walkAtRules('include', atRule => {
-			const nodes = JSON.stringify(atRule.nodes);
+			if (!atRule) {
+				return;
+			}
 
-			const hasNesting = (nodes.includes('selector') && atRule.params.includes('media')) || (atRule.parent.type === "root");
+			const { nodes: node, params, parent } = atRule;
+
+			const nodes = JSON.stringify(node);
+
+			if (typeof nodes !== 'string' || typeof params !== 'string') {
+				return;
+			}
+
+			const hasNesting = (!!nodes.includes('selector') && !!params.includes('media')) || (parent.type === "root");
 
 			if (!hasNesting) {
 				return;
