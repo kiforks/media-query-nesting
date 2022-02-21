@@ -1,6 +1,6 @@
 {
   "name": "media-query-nesting",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SCSS media query mixins nesting",
   "main": "index.js",
   "files": [
