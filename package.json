@@ -1,6 +1,6 @@
 {
   "name": "media-query-nesting",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "SCSS media query mixins nesting",
   "main": "index.js",
   "files": [
@@ -29,14 +29,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kifork/media-query-nesting.git"
+    "url": "git+https://github.com/kiforks/media-query-nesting.git"
   },
   "author": "<ks.kifor@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kifork/media-query-nesting/issues"
+    "url": "https://github.com/kiforks/media-query-nesting/issues"
   },
-  "homepage": "https://github.com/kskifor/media-query-nesting#readme",
+  "homepage": "https://github.com/kiforks/media-query-nesting#readme",
   "scripts": {
     "test": "npx stylelint test/**/*.scss",
     "fix": "npx stylelint test/**/*.scss --fix"
