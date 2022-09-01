@@ -36,7 +36,7 @@ module.exports = stylelint.createPlugin(ruleName, (enabled) => {
 				return;
 			}
 
-			const hasNesting = (!!nodes.includes('selector') && !!params.includes('media')) || (parent.type === "root");
+			const hasNesting = !!nodes.includes('selector') && !!params.includes('media') && parent.type === "rule";
 
 			if (!hasNesting) {
 				return;
